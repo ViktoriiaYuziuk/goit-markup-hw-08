@@ -1,0 +1,32 @@
+.join {
+  margin-right: 93px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: var(--white-color);
+  }
+
+}
+
+
+.join-list {
+  &__item {
+    background-color: var(--footer-icon-bg-color);
+  }
+
+  &__link {
+    fill: var(--white-color);
+  }
+}
+
+
+
+
+
