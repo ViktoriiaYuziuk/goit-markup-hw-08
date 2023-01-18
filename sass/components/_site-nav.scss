@@ -5,6 +5,10 @@
   &__list {
     display: flex;
     margin-left: 93px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__item:not(:last-child) {
@@ -51,4 +55,6 @@
       border-radius: 2px;
     }
   }
+
+  
 }

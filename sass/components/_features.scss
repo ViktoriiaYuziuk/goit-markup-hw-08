@@ -1,5 +1,29 @@
 .features-list {
   display: flex;
+  gap: 30px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+
+    @media (max-width: 767px) {
+      max-width: 450px;
+    }
+
+    @media (min-width: 768px) {
+      max-width: 354px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 270px;
+    }
+  }
 
   &__icon {
     display: flex;
@@ -8,21 +32,12 @@
 
     margin-bottom: 30px;
 
-    width: 270px;
     height: 120px;
 
     background: var(--secondary-bcg-color);
     border-radius: 4px;
   }
-
-  &__item {
-    width: 270px;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
-
+  
   &__title {
     margin-top: 0;
     margin-bottom: 10px;
@@ -32,6 +47,10 @@
     line-height: 1.14;
 
     text-transform: uppercase;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__text {
