@@ -1,13 +1,31 @@
 .address-list {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
+  @media (max-width: 1199px) {
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-right: 70px;
+  }
+  
+  
   width: 231px;
 
-  margin-right: 70px;
+  
+
+  
 
   &__link {
     display: inline-block;
+
+    @media (max-width: 1199px) {
+      margin-bottom: 12px;
+    }
+    
     
     color: var(--white-color);
 
@@ -40,5 +58,7 @@
     &:focus {
       color: var(--accent-color);
     }
+
+    
   }
 }

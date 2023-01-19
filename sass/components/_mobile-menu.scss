@@ -88,9 +88,11 @@
 
 .mobile-contact-list {
   padding-left: 40px;
+  margin-bottom: 64px;
   
   &__tel {
-    bottom: 32px;
+    display: block;
+    margin-bottom: 32px;
 
     font-weight: 500;
     font-size: 34px;
@@ -108,4 +110,27 @@
 
   color: var(--secondary-text-color);
 }
+}
+
+.mobile-socials {
+  display: flex;
+  gap: 20px;
+  padding-left: 40px;
+  padding-bottom: 48px;
+
+  max-width: 357px;
+
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.222;
+    letter-spacing: 0.02em;
+
+    color: var(--accent-color);
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
