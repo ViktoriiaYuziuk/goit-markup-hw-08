@@ -288,17 +288,17 @@ header {
 
 .hero-section {
   max-width: 1600px;
-  min-height: 600px;
+  min-height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
   margin: 0 auto;
+  text-align: center;
   background-color: var(--secondary-bcg-color);
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-mobile-1x.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  text-align: center;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero-section {
@@ -378,7 +378,16 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
+  height: 164px;
+}
+@media (min-width: 1200px) {
+  .hero-container {
+    height: 200px;
+  }
 }
 
 .button {
