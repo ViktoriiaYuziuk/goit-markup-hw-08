@@ -114,19 +114,41 @@
 
 .mobile-socials {
   display: flex;
-  gap: 20px;
+  
   padding-left: 40px;
   padding-bottom: 48px;
 
   max-width: 357px;
 
+  &__item {
+    padding-right: 10px;
+    padding-left: 10px;
+
+    border-right: 1px solid var(--modal-border-color);
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+
   &__link {
+    
+
     font-weight: 500;
     font-size: 18px;
     line-height: 1.222;
     letter-spacing: 0.02em;
 
+    
+
     color: var(--accent-color);
+
+    
 
     &:hover,
     &:focus {
