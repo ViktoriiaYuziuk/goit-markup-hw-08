@@ -1,5 +1,6 @@
 .join {
-  margin-right: 93px;
+  margin-bottom: 60px;
+  
 
   &__title {
     margin-top: 0;
@@ -15,12 +16,21 @@
 
   @media (max-width: 1199px) {
     text-align: center;
+    
+    
   }
 
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding-right: 89px;
+    margin-left: 165px;
+  }
 }
 
 
 .join-list {
+  display: flex;
+  justify-content: center;
+  height: 44px;
   &__item {
     background-color: var(--footer-icon-bg-color);
   }

@@ -1,32 +1,38 @@
+
 .address-list {
-  @media (max-width: 1199px) {
-    margin: 0 auto;
+  width: 231px;
+
+  @media (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
     text-align: center;
-    
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+    text-align: center;
+    width: 232px;
+  }
+
+  @media (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 
   @media (min-width: 1200px) {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 9px;
     margin-right: 70px;
+    width: 231px;
   }
   
-  
-  width: 231px;
-
-  
-
-  
-
   &__link {
     display: inline-block;
 
-    @media (max-width: 1199px) {
-      margin-bottom: 12px;
-    }
-    
-    
     color: var(--white-color);
 
     font-style: normal;
@@ -42,8 +48,6 @@
     }
   }
 
-  
-
   &__item {
     color: var(--footer-link-color);
 
@@ -51,6 +55,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+    
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -58,7 +63,5 @@
     &:focus {
       color: var(--accent-color);
     }
-
-    
   }
 }
