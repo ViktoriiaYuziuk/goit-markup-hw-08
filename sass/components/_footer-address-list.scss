@@ -27,7 +27,12 @@
     align-items: flex-start;
     gap: 9px;
     margin-right: 70px;
+    margin-bottom: 0;
     width: 231px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 60px;
   }
   
   &__link {
