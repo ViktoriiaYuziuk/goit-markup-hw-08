@@ -1,6 +1,12 @@
 .projects {
   &__list {
 
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
     @media (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
@@ -25,6 +31,17 @@
   &__thumb {
     position: relative;
     overflow: hidden;
+
+    max-width: 450px;
+
+    @media (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 370px;
+    }
+
   }
 
   &__overlay {
@@ -36,7 +53,7 @@
     left: 0;
     background: rgba(33, 150, 243, 0.9);
 
-    transform: translatey(100%);
+    transform: translatey(101%);
     transition: transform 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -62,20 +79,40 @@
   }
 
   &__item {
-    flex-basis: calc((100% - 60px) / 3);
 
-    width: 33.3333%;
-    line-height: 1.88;
+    @media (min-width: 1200px) {
+      flex-basis: calc((100% - 60px) / 3);
+      width: 33.3333%;
+    }
+      
+      line-height: 1.88;
+    
+
+    @media (min-width: 768px) {
+      
+    }
+    
   }
 
   &__border {
+    flex-grow: 1;
     box-sizing: border-box;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
 
-    width: 370px;
+    max-width: 450px;
+
+    @media (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 370px;
+    }
+
+   
 
     border-bottom: 1px solid var(--cards-stroke-color);
     border-left: 1px solid var(--cards-stroke-color);

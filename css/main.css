@@ -1202,6 +1202,7 @@ header {
   .filters__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    row-gap: 15px;
     margin-bottom: 40px;
   }
 }
@@ -1243,6 +1244,18 @@ header {
   margin-right: 8px;
 }
 
+@media (max-width: 767px) {
+  .projects__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
 @media (min-width: 768px) {
   .projects__list {
     display: -webkit-box;
@@ -1266,6 +1279,17 @@ header {
 .projects__thumb {
   position: relative;
   overflow: hidden;
+  max-width: 450px;
+}
+@media (min-width: 768px) {
+  .projects__thumb {
+    width: 354px;
+  }
+}
+@media (min-width: 1200px) {
+  .projects__thumb {
+    width: 370px;
+  }
 }
 .projects__overlay {
   position: absolute;
@@ -1274,8 +1298,8 @@ header {
   bottom: 0;
   left: 0;
   background: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translatey(100%);
-          transform: translatey(100%);
+  -webkit-transform: translatey(101%);
+          transform: translatey(101%);
   -webkit-transition: -webkit-transform 250ms;
   transition: -webkit-transform 250ms;
   transition: transform 250ms;
@@ -1303,22 +1327,39 @@ header {
   color: var(--white-color);
 }
 .projects__item {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
-  width: 33.3333%;
   line-height: 1.88;
 }
+@media (min-width: 1200px) {
+  .projects__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+    width: 33.3333%;
+  }
+}
 .projects__border {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
-  width: 370px;
+  max-width: 450px;
   border-bottom: 1px solid var(--cards-stroke-color);
   border-left: 1px solid var(--cards-stroke-color);
   border-right: 1px solid var(--cards-stroke-color);
+}
+@media (min-width: 768px) {
+  .projects__border {
+    width: 354px;
+  }
+}
+@media (min-width: 1200px) {
+  .projects__border {
+    width: 370px;
+  }
 }
 .projects__title {
   margin-top: 0;
